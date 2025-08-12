@@ -1,0 +1,59 @@
+body {
+
+background: #0F0F15;
+background: linear-gradient(90deg,rgba(15, 15, 21, 1) 0%, rgba(26, 26, 46, 1) 50%, rgba(24, 29, 54, 1) 100%);
+}
+
+.container{
+    display:grid;
+    grid-gap:20px;
+    grid-template-columns: [site-left] 1fr [content-start] 500px [content-end] 1fr [site-right];
+    grid-template-rows:[content-top] repeat(10,auto)[content-bottom];
+    grid-template-areas:"navbar navbar navbar"
+                        "l-side content-start content-end r-side"
+                        "footer footer footer"
+
+}
+.nav{
+    grid-area:"navbar";
+    background-color:orange;
+}
+
+.item1{
+    grid-row: 1 / 2;  
+    background-color:yellow;  
+}
+.designer { 
+    justify-items: center;
+    grid-area:"l-side";
+    background-color:green;}
+
+.developer { 
+    grid-area:"r-side";
+    background-color:yellow;}
+
+div.about-me{
+    padding:5%;
+}    
+div.about-me > h1 {
+    grid-area:"content-start";
+    
+}
+div.about-me > p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;}
+div.about-me > img{
+    grid-area:"content-end";
+    border: solid 5px;
+    border-color: #6a70d6;
+    border-radius: 50em;
+    width:50%;
+}
+.about-me{justify-content: center;}
+
+h1#ral {
+
+    color:#6a70d6;
+    font-size:3.5rem;
+    font-family: 'League Gothic','Abraham Lincoln', sans-serif;
+}
